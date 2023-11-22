@@ -1,0 +1,659 @@
+What is Angular:
+-------------------
+* Front End Framework
+* Used to Develop Single Page Web Application (SPA)
+* Security
+* Typescript - It is the programming language for Angular
+* Developed and maintained by Google
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+** https://Angular.io - official website **
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Angular is a huge architecture which is used to create a web applications.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+NPM - Node Package Manager
+CLI - Command Line Interface
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+npm version - Displays versions of npm.
+npm i -g @angular/cli - Installs the latest version globally in our desktop.
+npm i @angular/cli @14 - Installs the specified version in our desktop.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+npm - Node Command
+ng - Angular Command
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ng new ProjectName - installs the new project space for angular and downloads the necessary packages from npm and uses 
+SCSS for styling.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Once the npm installed 
+Step - ng build - building
+Step - ng serve --open - running - Launch browser
+          ng serve http://localhost:4200
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Whatever we code in typescript it will finally gets converted to Javascript.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Typescript:
+-------------
+ *Superset of JavaScript
+ *Foolows OOPS Model
+       - class
+       - object
+       - Inheritance
+       - Interface
+ * Developed and maintained by Microsoft
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advantages of Typescript:
+------------------------------
+- This tells the compile time error.
+- This follows OOPS Concept. 
+--------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Types of Error:
+------------------
+    - Run Time Error
+    - Compile Time Error
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Datatypes:
+------------
+The most used datatypes are:-
+* String
+* Number
+* Boolean
+* Any
+* Null
+* Undefined
+* Const
+* Object
+* array 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+String:
+-------
+It stores sequence of characters. It can be assigned in TypeScript as var or let.
+Syntax:- 
+var name: String; --> Variable Declaration.
+name = "Kishore"; --> Value Initialization
+(OR)
+var name: String = "Kishore"; --> Variable Declaration & Value Initialization
+(OR)
+var name = "Kishore";
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Number:
+----------
+It stores sequence of numbers. It can be assigned in TypeScript as var or let.
+Syntax:-
+var age: Number; --> Variable Declaration.
+age = 12; --> Value Initialization
+(OR)
+var age: Number = 12; --> Variable Declaration & Value Initialization
+(OR)
+var age = 12;
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Boolean:
+----------
+It stores the values like yes or no, true or false, etc.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Any:
+------
+It stores the value of any kind or any datatype.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Array:
+------
+It stores the value in an array.
+
+Declaration - var array:string[]=[];
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Class & Object:
+------------------
+Class:-
+* Container of member variables and member functions. 
+* Variables(Properties) and Functions can be accessed only through object.
+
+Functions:-
+   - Parameterized Function
+   - Parameterless Function
+
+* Functions are set of codes which is used to perform an action.
+Example:
+Average(), Sum(), CalculateSalary().
+
+Object:-
+* Object is an instance of class.
+* Through object we can access member variables and functions.
+Syntax:-
+var obj = name car();
+      
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Constructor:
+--------------
+* It is the first to get invoke / call when an object is created.
+* Constructor are used to initialize member variables.
+
+
+class Car{
+    model:string;
+    madeYear:number;
+    Constructor(model:string,madeYear:number){
+        this.model=model;
+        this.madeYear=madeYear;
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+access modifiers
+-------------------
+
+public - functions or methods and Properties are accessible within class and outside class.
+
+private - within class
+
+protected - within class and inherited class
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+IF - condition
+
+* if condition satisfies set of code runs.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+IF - ELSE condition
+
+* if condition satisfies set of code runs else the other set of code runs.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ELSEIF - condition 
+* if condition satisfies set of code runs else if the other condition satisfies set of code runs else the other else part of code executes.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+WHILE - loop
+
+* loops the statement until it gets false condition
+
+var a=10;
+var sum=0;
+
+while(a>0){
+    sum+=a;
+    a--;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+DO-WHILE
+
+* do an action once and checks the condition if true executes the loop until get false.
+var a=10;
+var sum=0;
+
+do{
+    sum=sum+a;
+    a=a-1;
+}while(a>0)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FOR loop
+
+* loops the statement until gets false.
+
+for(let i=0;i<3;i++){
+    console.log(i);
+}
+o\p 
+0
+1
+2
+
+let name = "jacob";
+
+for(var char of name){
+    console.log(char);
+}
+o\p
+j
+a
+c
+o
+b
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+let strArray=["lion","tiger",girafee];
+
+for(var name in string){
+    console.log(name);
+    console.log(strArray[name]);
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Interface
+
+Interface contains only Declaration and not definitions.
+
+definitions will be handled in class.
+
+Example : Blueprint of house 
+
+            Interface Student {
+                StudentId:number;
+                DisplayStudent()void;
+            }
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMPONENTS
+-----------
+    components are building blocks od angular.
+    components are directives which contains UI elements (HTML),design(CSS) and typescript class for functional behavior.
+
+    ng generate component login (or) ng g component login.
+
+    every angular project should have atleast have 1 component
+
+        app.component.ts
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+One way property binding
+------------------------
+
+    * transfer of data from html to typescript or typescript to html.
+    
+    Interpolation Syntax - {{property name}}
+
+support one way tranfer of data from typescript to html.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Style Binding
+-------------
+
+[style.style-attribute]=""
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Class Binding
+-------------
+
+[class.classname]="true"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Attribute Binding
+-----------------
+
+
+[attribute name]="property name"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ngFor
+-----
+
+ngFor is used to extend html by iterating array or object.
+
+Example :
+
+      languages: string[] = ['C#', 'JAVA', 'Python', 'SQL'];
+
+        " *ngFor ="let value of languages" "
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ngIF
+
+*ngIf="value =='physics' || value =='chemistry'"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ngStyle
+-------
+
+Diretive used to set style for DOM elements.
+
+TS:
+AllPass:Boolean;
+
+HTML:
+<div [ngStyle]="{'background-color':AllPass==true?"green":"red"}">WELCOME</div>
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ngClass 
+-------
+
+directives allows to set CSS class dynamically
+
+CSS
+    .allpass{
+        color:green;
+        font-size:50 px;
+    }
+TS
+    AllPass:boolean=true;
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Switch(express)
+    case: "exp1";
+    case: "exp2";
+    default: "default expression"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Directives
+----------
+
+-> Component
+    ex: component
+
+->Structural
+    change the appearance (or) behavior of DOM element
+        ex : ngClass, ngStyle
+
+-> Attribute
+    change the DOM by adding or removing DOM elements
+        ex : *ngIf, *ngFor,ngSwicth.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Routing
+-------
+
+    Routing is navigation from component to another component.
+
+    router-outlet ->built in angular directive which act as placeholder where routed component will replace.
+
+    routerlink -> used for navigation to different route.
+
+
+    Step 1 :
+        import the component module and Routes the path to app-routing.module.ts 
+    Step 2 :
+        RouterModule.forRoot(routes) -> set to NgModule
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Routing:
+---------
+Routing is a navigating from 1 component to another component in Angular.
+
+Router Outlet -> Built in Angular directive which act as Placeholder where routed component will replace. ----> HTML
+
+routerLink -> Used for navigating to different route. ----> HTML
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+How to add a new route?
+
+Step 1:- Add path and component in Router module. 
+
+Step 2:- Routermodule.ForRoot(routes).
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Query String:
+---------------
+Query String is the additional parameters passed along with URL which provides more information about the URL.
+
+Maximum String length of a Query String is 256 Characters.
+
+Example:-
+www.webwhatsapp.com/kishore
+www.facebook.com/profile?name=Kishore
+www.instagram.com/reels?id=trending&&category=entertainment
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+AuthGuard - Routing:
+---------------------
+To protect / guard a route AuthGuard was used.
+
+Example:
+Without Login / Authentication we will not allow to access other pages.
+
+CanActivate -> Interface is used to decide whether we can load Route Path based on the boolean Flag (value) returned from 
+AuthGuard.
+
+CanActivateChildren -> Interface decides which child Path can be loaded based on the boolean value from the AuthGuard.
+
+CanMatch -> Interface which matches current route based on AuthGuard response.
+
+Syntax:
+ng g guard Auth
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Two Way Data Binding:
+----------------------------
+Data transfer from component to HTML and HTML to Component.
+
+Step 1:
+import {formsModule} from '@angular/forms'
+Add formsModule in Imports
+
+Step 2: (HTML)
+<input type="text" [(ngModel)] = "UserName" name = "UserName">
+
+Step 3: (Component TS)
+property should not be followed.
+UserName: string = " ";
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Angular Life cycle
+------------------
+
+Ngonchanges -> invoked / called when value of input property changed.
+
+NgonInit -> called when component initialized call only once.
+
+NgDocheck -> called when input property of component checked.
+
+NgAfterContentInit -> called when external content projected into component.
+
+NgAfterContentchecked -> called after contentInit called when content of the component checked.
+
+NgAfterViewInit -> called when angular view and its children view fully initialized.
+
+NgAfterViewchecked -> called after ViewInit called when angular view was fully checked by angular change detection algorithm.
+
+NgonDestroy -> Invoked just before angular destroy component.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Feature Modules & Lazy Loading:
+----------------------------------------
+-> By default, Ngmodule are eagerly loaded means as soon as application loads all modules are loaded.
+-> Feature module is the one which contains components, directives and services based on feature.
+    Example:-
+    ------------
+    Product:-
+        -> Order
+        -> Customer
+        -> Purchases
+        -> Transactions
+
+    ng generate module module-name --route route-path --module app.module
+
+-> Lazy Loading provides the flexibility to user that when lazy loaded route loads corresponding files (components, directives) will
+    be loaded.
+-> Feature modules & Lazy loading are used to achieve good performance in large scale applications.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Forms:
+--------
+-> Template Driven Forms:-
+---------------------------------
+   -> Simple
+   -> Depends on Angular directives for form validation.
+   -> Validation and other data binding will be present in HTML.
+
+-> Reactive Forms:-
+------------------------
+   -> Complex
+   -> Scalable
+   -> Validation and other data binding will be present in component file.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Template Driven Forms:
+----------------------------
+Form States:-
+----------------
+Touched -> Form field focused atleast once.
+Pristine -> Form remains unchanged.
+Dirty -> Form contains error.
+Error -> Error Collection.
+Valid -> Returns true only if all form validation passes.
+Untouched -> Form field has never been touched.
+ngForm -> Directive applied to form to track form state.
+ngModel -> Used to achieve two way binding.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Reactive Forms:
+-------------------
+Complex and Dynamic forms.
+Logics are handled in component (TS Code).
+
+FormGroup:-
+----------------
+     -> Form Control - Individual form control used to manage state of input field.
+     -> Form Array - Collection of form control.
+     -> Form Group (Child) - A form group can have another form group.
+
+Validators:-
+--------------
+     -> MinLength
+     -> MaxLength
+     -> Required
+     -> Email
+     -> Pattern
+The above mentioned all are Built-in Validators.
+
+FormBuilder:-
+-----------------
+Class Provides methods for creating instances (object) for FormGroup, FormControl and FormArray.
+
+AbstractControl:-
+---------------------
+Base Class for FormControl, FormArray and FormGroup.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Pass Data from Parent Component to Child and Child Component to Parent Component:-
+--------------------------------------------------------------------------------------------------------
+@Input - Decorator in Child Component that specifies property recieve its value from Parent Component.
+              @Input
+--------------------------------
+|                Data          |
+|   Parent --------> Child     |
+|                Flow          |
+--------------------------------
+
+@Output - Marks a property in Child Component in which data travels from child to parent.
+                 Data transfered to parent by event emitter.
+                @Output
+-----------------------------------
+|                   Data          |
+|   Parent <--------- Child       |
+|                  Flow           |
+-----------------------------------
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+@viewchild
+
+-> Decorator allows to get instance/ reference of single child component or DOM 
+
+-> Through @viewchild we can able to interact with Properties or methods of child from parent.
+
+-> NgAfterViewInit, NgAfterViewchecked - lifecycle  
+
+        @viewchildren
+
+-> similar to view but through @viewchildren we can able to get reference of multiple components as QueryList 
+
+-> NgAfterViewInit, NgAfterViewchecked
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+@content child
+
+    -> decorator allows you to get reference to single projected component, directive 
+    
+    ->used to access a specific projected component or element within the parent component 
+
+    @contentchildren
+
+    <ng-content></ng-content>
+
+    -> decorator allows you to get reference to multiple projected components 
+
+    -> Returns Query Collection
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dependency Injection
+----------------------
+
+-> Dependency Injection is a design Pattern in which depedencies are injected into components, directives.
+
+-> @injector is the decorator to indicate depedencies would be injected in components, directives.
+
+-> Constructor Injection is most commonly used where injection will be place inn Constructor
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Services 
+---------
+
+-> services are special type of class files where application specific logic will be written.
+
+    Example: Calculate Marks, Average, topper of school.
+
+-> services are mostly involved in  communicating with backend API such as .Net, Java, Python and get detail from database 
+
+-> easy to write unit testcases.
+
+-> provides is the area where services would be injected.
+
+-> Provided In - 'root'
+
+    States that reference of services available globally
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+HTTP VERBS 
+-----------
+
+Request type        Description
+------------        ------------
+
+Get                 used to fetch data through URL "https://www.school.com/api/get/1234" -> Query string 
+
+Put                 used to modify data  "https://www.school.com/api/put/1234"
+
+Post                used to create data Example: create new user, create new school 
+
+                        "https://www.school.com/api/user/post"
+
+Delete              used to delete data (user) Example: Delete user, Delete school
+
+                        "https://www.school.com/api/user/api/delete/1234"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+HttpClientModule & HttpClient
+-------------------------------
+
+1. import HttpClientModule, HttpClient in module.ts
+
+2. add to Imports in module.ts
+
+3. add HttpClient to providers in module to use globally
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ng-Template
+-------------
+
+ -> A Template element in angular users with Structural directives - *ngIF,*ngFor
+
+    Sample Code :-
+
+        <div *ngIF="isShow" class="hello-world">hello</div>
+
+        <ng-Template [ngIF]="isShow"><div class="hello-world">hello</div></ng-Template>
+
+    Sample Code :-
+        
+        <ng-Template #section>
+            <h1>section</h1>
+            <p>Description</p>
+        </ng-Template>
+
+        <div [ngTemplateOutlet]="section"></div>
+        <div *ngIF="isShow" [ngTemplateOutlet]="section"></div>
+
+    typescript
+
+        isShow = true;
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
